@@ -1,14 +1,23 @@
 #include <string>
 #include "Empregado.hpp"
+#include "Vendedor.hpp"
 
-class Vendedor : public Empregado {
+void Vendedor::setNome(std::string _nome) {
 
-  public:
-    std::string nome;  	  
-	
-	double quotaTotalAnual() {
-	  return quotaMensalVendas * 12;
-	}
-	
-};
+    nome = _nome;
+
+}
+
+std::string Vendedor::getNome() const {
+
+    return(nome);
+
+}
+
+double Vendedor::quotaTotalAnual() {
+
+	  return quotaMensalVendas * nMesesAno;
+
+}
+
 
